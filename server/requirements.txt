@@ -5,3 +5,4 @@ typing
 enum34
 pandas
 numpy
+scikit-learn
