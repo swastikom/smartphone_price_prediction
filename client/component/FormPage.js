@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from '@/styles/FormPage.module.css'
+import { BsFillArrowRightSquareFill } from "react-icons/bs";
 
 const FormPage = () => {
   const totalSteps = 3;
@@ -42,22 +43,38 @@ const FormPage = () => {
         </div>
       )}
 
-      {currentStep === 1 && <div>{
+      {currentStep === 1 && (
         <div>
-          <input
-            type="text"
-            value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          />
+          {
+            <div className={styles.step1}>
+              {currentStep > 0 && (
+                <button onClick={handlePrevious}>Previous</button>
+              )}
+              <input
+                type="text"
+                value={formData.name}
+                placeholder="Operating System"
+                onChange={(e) =>
+                  setFormData({ ...formData, name: e.target.value })
+                }
+              />
+            </div>
+          }
         </div>
-        }
-        </div>}
+      )}
 
-      {currentStep === 2 && <div>{/* Input fields for step 2 */}</div>}
+      {currentStep === 2 && (
+        <div>
+          {currentStep > 0 && (
+            <button onClick={handlePrevious}>Previous</button>
+          )}
+        </div>
+      )}
 
-      {currentStep > 0 && <button onClick={handlePrevious}>Previous</button>}
       {currentStep < totalSteps - 1 ? (
-        <button onClick={handleNext}>Next</button>
+        <button onClick={handleNext} className={styles.nextButton}>
+          <BsFillArrowRightSquareFill />
+        </button>
       ) : (
         <button onClick={handleSubmit}>Submit</button>
       )}
