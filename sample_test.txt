@@ -1,0 +1,13 @@
+{
+  "os": "Android v13",
+  "Number_of_Sim": 2,
+  "Processor_Name": "Snapdragon 8 Gen2",
+  "Processor_No_of_Cores": 8,
+  "Ram_Size_GB": 6,
+  "Rom_Size_GB": 128.0,
+  "Battery_Capacity": 5080.0,
+  "Display_Size_inches": 6.70,
+  "Rear_Camera": 64,
+  "Front_Camera": 13,
+  "External_Card_Support": 1
+}
