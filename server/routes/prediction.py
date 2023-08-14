@@ -20,7 +20,6 @@ def home():
 
 @router.post("/predict_score", tags=[Tags.predict_result])
 def prediction(smartphone_data:Data):
-    
 
     # Determine the directory of the current script
     current_dir = os.path.dirname(os.path.abspath(__file__))
