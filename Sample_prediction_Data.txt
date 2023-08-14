@@ -11,5 +11,3 @@
   "Front_Camera": 13,
   "External_Card_Support": 1
 }
-
-API Link :- https://phonesuggest.onrender.com/docs
