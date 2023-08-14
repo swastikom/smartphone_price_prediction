@@ -1,0 +1,36 @@
+.container {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 1em 0em;
+    background: rgba(0, 0, 0, 0.504);
+    backdrop-filter: blur(15px);
+    border-bottom: 0.5px solid rgba(178, 178, 178, 0.19);
+}
+
+.container h1 {
+    background: -webkit-linear-gradient(rgb(152, 41, 255), #707cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* 
+        color: rgb(12, 157, 241); */
+    font-style: normal;
+    font-weight: 700;
+}
+
+.links {
+    display: flex;
+}
+
+.links li {
+    padding-left: 1em;
+    padding-right: 1em;
+    list-style: none;
+    color: rgb(193, 193, 193);
+}
+
+.links li:hover {
+    color: aliceblue;
+}

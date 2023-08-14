@@ -1,0 +1,10 @@
+.hero{
+    padding-top: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageStyle{
+    margin-right: 10em;
+}

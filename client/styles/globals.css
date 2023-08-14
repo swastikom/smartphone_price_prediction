@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+}
+
+
+body {
+  padding-bottom: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+
+}
+
+/* width */
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

@@ -1,0 +1,16 @@
+.container{
+    width: 30em;
+}
+
+.container h1{
+    font-weight: 400;
+    color: rgb(148, 48, 255);
+    font-size: 4em;
+}
+
+.container h2{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 2.5em;
+    font-weight: 500;
+}
