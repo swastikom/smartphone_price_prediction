@@ -5,4 +5,3 @@ typing
 enum34
 pandas
 numpy
-os
