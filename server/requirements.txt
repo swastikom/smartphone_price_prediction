@@ -2,3 +2,8 @@ uvicorn
 fastapi
 pydantic
 typing
+enum
+pandas
+pickle
+numpy
+os
