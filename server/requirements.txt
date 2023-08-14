@@ -4,6 +4,5 @@ pydantic
 typing
 enum34
 pandas
-pickle
 numpy
 os
