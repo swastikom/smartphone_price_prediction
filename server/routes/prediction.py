@@ -21,21 +21,19 @@ def home():
 @router.post("/predict_score", tags=[Tags.predict_result])
 def prediction(smartphone_data:Data):
     
+
     # Determine the directory of the current script
     current_dir = os.path.dirname(os.path.abspath(__file__))
 
     # Construct paths to the model files based on the current directory
-    price_model_path = os.path.join(
-        current_dir, '..', '..', 'prediction', 'models', 'price_model.pkl')
-    brand_model_path = os.path.join(
-        current_dir, '..', '..', 'prediction', 'models', 'brand_model.pkl')
+    price_model_path = os.path.join( current_dir, '..', 'ml_model', 'price_model.pkl')
+    brand_model_path = os.path.join(current_dir, '..', 'ml_model', 'brand_model.pkl')
 
     # Model Import
     with open(price_model_path, 'rb') as file:
         loaded_model_price, loaded_encoder_os, loaded_encoder_pro = pickle.load(file)
     with open(brand_model_path, 'rb') as file:
         loaded_model_brand, loaded_encoder_brand, loaded_encoder_processor = pickle.load(file)
-
     
     # Price Dataframe creation and Prediction
     data_for_price = {
