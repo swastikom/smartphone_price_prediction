@@ -1,5 +1,5 @@
 .hero{
-    padding-top: 4em;
+    padding-top: 5em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,4 +7,6 @@
 
 .imageStyle{
     margin-right: 10em;
+
 }
+

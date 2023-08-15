@@ -1,56 +1,130 @@
-.container{
-    width: 30em;
-    height: 40em;
+.container {
+    width: 25em;
+    height: 30em;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: flex-start;
 }
 
-.container h1{
+.container h1 {
     font-weight: 400;
-    color: rgb(171, 93, 255);
+    color: #b26aff;
     font-size: 4em;
 }
 
-.container h2{
+.container h2 {
     padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.4em;
     font-size: 2.5em;
     font-weight: 500;
 }
 
-.nextButton{
+.nextButton {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0px;
     margin: 0px;
     border: 0px;
-    background:none;
+    background: none;
     cursor: pointer;
     color: blueviolet;
     font-size: 3em;
 }
 
-.nextButton:hover{
-    color: rgb(91, 13, 163)
+.nextButton:hover {
+    color: rgb(91, 13, 163);
 }
 
-.step1{
+.step1 {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 3em;
+    align-items: flex-start;
+    height: 100%;
 }
 
-.step1 button{
-    width: 5em;
+.step1 h2 {
+    font-size: 3em;
+    color: #b26aff;
 }
 
-.step1 input{
+.item1 {
+    margin-bottom: 3em;
+}
+
+.buttonGroup {
+    display: grid;
+    grid-template-columns: repeat(3, 9em);
+    gap: 10px;
+}
+
+.formButton{
+    padding: 0.7em;
+    color: #b26aff;
+    border: 2px solid #b26aff;
+    font-weight: bolder;
+    background-color: black;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1.1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.formButton:hover{
+    color: #a94efd;
+    border-color: #a94efd;
+}
+
+.active{
+    background-color: #6a15ba;
+    color: black;
+    border-color: #6a15ba;
+}
+
+.active:hover{
+    background-color: #6a15ba;
+        color: black;
+        border-color: #6a15ba;
+}
+
+.textInputContainer input{
     outline: none;
-    width: 20em;
+    width: 25.5em;
+    padding: 1em;
+    border-radius: 0.5em;
+    background-color: black;
+    border: 2px solid #b26aff;
+    color: #b26aff;
+    font-size: 1.1em;
+    margin-bottom: 1em;
 }
 
-.step1 input:focus{
-    outline-color: blueviolet;
+.textInputContainer input::placeholder{
+    color: #b26aff;
+}
+
+.submitButton{
+    font-size: 2em;
+    padding: 0.3em;
+    width: 9em;
+    background-color: #b26aff;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.submitButton:hover {
+    background-color: #a94efd;
+}
+
+.step1 p{
+    color: rgb(255, 0, 81);
+    font-weight: normal;
+    font-size: 1.2em;
 }

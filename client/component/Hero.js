@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '@/styles/hero.module.css'
 import FormPage from './FormPage';
 
+
 function Hero() {
   return (
     <div className={styles.hero}>
