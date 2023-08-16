@@ -6,8 +6,11 @@ import {
   BsFillSimFill,
   BsCameraFill,
   BsSdCardFill,
+  BsFire,
 } from "react-icons/bs";
 import { GiProcessor } from "react-icons/gi";
+import {MdCancel} from "react-icons/md"
+import Link from "next/link";
 
 const FormPage = () => {
   const totalSteps = 12;
@@ -27,12 +30,15 @@ const FormPage = () => {
     // Other form fields
   });
   const [isFormIncomplete, setIsFormIncomplete] = useState(false);
+  const [apiResponse, setApiResponse] = useState(null);
+  const [apiError, setApiError] = useState(null);
   const handleNext = () => {
     setCurrentStep(currentStep + 1);
   };
 
   const handlePrevious = () => {
     setCurrentStep(currentStep - 1);
+    setApiResponse(null)
   };
 
   const handleButtonSelect = (fieldName,selectedValue) => {
@@ -75,17 +81,58 @@ const FormPage = () => {
         }
       );
 
+      const responseData = await response.json();
+      console.log("Response Data:", responseData);
+
       // Handle the response or any necessary logic here
       // For example:
       if (response.ok) {
-        // Handle success
+        setApiResponse(responseData);
+        setApiError(null);
       } else {
-        // Handle error
+        setApiResponse(null);
+        setApiError(responseData.error);
       }
     } catch (error) {
-      // Handle error
+      setApiResponse(null);
+      setApiError("An error occurred while making the API request.");
     }
+    setFormData({
+      os: "",
+      Number_of_Sim: 0,
+      Processor_Name: "",
+      Processor_No_of_Cores: 0,
+      Ram_Size_GB: 0,
+      Rom_Size_GB: 0,
+      Battery_Capacity: 0,
+      Display_Size_inches: 0,
+      Rear_Camera: 0,
+      Front_Camera: 0,
+      External_Card_Support: 0,
+    });
+    setIsFormIncomplete(false);
   };
+
+  const handleCancelButton = () => {
+    setFormData({
+      os: "",
+      Number_of_Sim: 0,
+      Processor_Name: "",
+      Processor_No_of_Cores: 0,
+      Ram_Size_GB: 0,
+      Rom_Size_GB: 0,
+      Battery_Capacity: 0,
+      Display_Size_inches: 0,
+      Rear_Camera: 0,
+      Front_Camera: 0,
+      External_Card_Support: 0,
+    });
+    setCurrentStep(0);
+    setIsFormIncomplete(false);
+    setApiResponse(null);
+  };
+
+  
 
   const operatingSystems = [
     "Android v10",
@@ -125,9 +172,17 @@ const FormPage = () => {
       {currentStep === 1 && (
         <div className={styles.step1}>
           {currentStep > 0 && (
-            <button onClick={handlePrevious} className={styles.nextButton}>
-              <BsFillArrowLeftSquareFill />
-            </button>
+            <div className={styles.buttonstyle}>
+              <button onClick={handlePrevious} className={styles.nextButton}>
+                <BsFillArrowLeftSquareFill />
+              </button>
+              <button
+                onClick={handleCancelButton}
+                className={styles.nextButton}
+              >
+                <MdCancel />
+              </button>
+            </div>
           )}
 
           <h2>What Operating System you are looking for?</h2>
@@ -152,9 +207,17 @@ const FormPage = () => {
       {currentStep === 2 && (
         <div className={styles.step1}>
           {currentStep > 0 && (
-            <button onClick={handlePrevious} className={styles.nextButton}>
-              <BsFillArrowLeftSquareFill />
-            </button>
+            <div className={styles.buttonstyle}>
+              <button onClick={handlePrevious} className={styles.nextButton}>
+                <BsFillArrowLeftSquareFill />
+              </button>
+              <button
+                onClick={handleCancelButton}
+                className={styles.nextButton}
+              >
+                <MdCancel />
+              </button>
+            </div>
           )}
 
           <h2>How much Sim do you want?</h2>
@@ -180,9 +243,17 @@ const FormPage = () => {
       {currentStep === 3 && (
         <div className={styles.step1}>
           {currentStep > 0 && (
-            <button onClick={handlePrevious} className={styles.nextButton}>
-              <BsFillArrowLeftSquareFill />
-            </button>
+            <div className={styles.buttonstyle}>
+              <button onClick={handlePrevious} className={styles.nextButton}>
+                <BsFillArrowLeftSquareFill />
+              </button>
+              <button
+                onClick={handleCancelButton}
+                className={styles.nextButton}
+              >
+                <MdCancel />
+              </button>
+            </div>
           )}
 
           <h2>What Processor you want?</h2>
@@ -221,9 +292,17 @@ const FormPage = () => {
       {currentStep === 4 && (
         <div className={styles.step1}>
           {currentStep > 0 && (
-            <button onClick={handlePrevious} className={styles.nextButton}>
-              <BsFillArrowLeftSquareFill />
-            </button>
+            <div className={styles.buttonstyle}>
+              <button onClick={handlePrevious} className={styles.nextButton}>
+                <BsFillArrowLeftSquareFill />
+              </button>
+              <button
+                onClick={handleCancelButton}
+                className={styles.nextButton}
+              >
+                <MdCancel />
+              </button>
+            </div>
           )}
 
           <h2>Ram you are looking for?</h2>
@@ -248,9 +327,17 @@ const FormPage = () => {
       {currentStep === 5 && (
         <div className={styles.step1}>
           {currentStep > 0 && (
-            <button onClick={handlePrevious} className={styles.nextButton}>
-              <BsFillArrowLeftSquareFill />
-            </button>
+            <div className={styles.buttonstyle}>
+              <button onClick={handlePrevious} className={styles.nextButton}>
+                <BsFillArrowLeftSquareFill />
+              </button>
+              <button
+                onClick={handleCancelButton}
+                className={styles.nextButton}
+              >
+                <MdCancel />
+              </button>
+            </div>
           )}
 
           <h2>Rom you are looking for?</h2>
@@ -275,9 +362,17 @@ const FormPage = () => {
       {currentStep === 6 && (
         <div className={styles.step1}>
           {currentStep > 0 && (
-            <button onClick={handlePrevious} className={styles.nextButton}>
-              <BsFillArrowLeftSquareFill />
-            </button>
+            <div className={styles.buttonstyle}>
+              <button onClick={handlePrevious} className={styles.nextButton}>
+                <BsFillArrowLeftSquareFill />
+              </button>
+              <button
+                onClick={handleCancelButton}
+                className={styles.nextButton}
+              >
+                <MdCancel />
+              </button>
+            </div>
           )}
 
           <h2>How much Battery Capacity you want?</h2>
@@ -300,9 +395,17 @@ const FormPage = () => {
       {currentStep === 7 && (
         <div className={styles.step1}>
           {currentStep > 0 && (
-            <button onClick={handlePrevious} className={styles.nextButton}>
-              <BsFillArrowLeftSquareFill />
-            </button>
+            <div className={styles.buttonstyle}>
+              <button onClick={handlePrevious} className={styles.nextButton}>
+                <BsFillArrowLeftSquareFill />
+              </button>
+              <button
+                onClick={handleCancelButton}
+                className={styles.nextButton}
+              >
+                <MdCancel />
+              </button>
+            </div>
           )}
 
           <h2>How much Display you want?</h2>
@@ -325,9 +428,17 @@ const FormPage = () => {
       {currentStep === 8 && (
         <div className={styles.step1}>
           {currentStep > 0 && (
-            <button onClick={handlePrevious} className={styles.nextButton}>
-              <BsFillArrowLeftSquareFill />
-            </button>
+            <div className={styles.buttonstyle}>
+              <button onClick={handlePrevious} className={styles.nextButton}>
+                <BsFillArrowLeftSquareFill />
+              </button>
+              <button
+                onClick={handleCancelButton}
+                className={styles.nextButton}
+              >
+                <MdCancel />
+              </button>
+            </div>
           )}
 
           <h2>How much Rear Camera?</h2>
@@ -353,9 +464,17 @@ const FormPage = () => {
       {currentStep === 9 && (
         <div className={styles.step1}>
           {currentStep > 0 && (
-            <button onClick={handlePrevious} className={styles.nextButton}>
-              <BsFillArrowLeftSquareFill />
-            </button>
+            <div className={styles.buttonstyle}>
+              <button onClick={handlePrevious} className={styles.nextButton}>
+                <BsFillArrowLeftSquareFill />
+              </button>
+              <button
+                onClick={handleCancelButton}
+                className={styles.nextButton}
+              >
+                <MdCancel />
+              </button>
+            </div>
           )}
 
           <h2>How much front Camera?</h2>
@@ -381,9 +500,17 @@ const FormPage = () => {
       {currentStep === 10 && (
         <div className={styles.step1}>
           {currentStep > 0 && (
-            <button onClick={handlePrevious} className={styles.nextButton}>
-              <BsFillArrowLeftSquareFill />
-            </button>
+            <div className={styles.buttonstyle}>
+              <button onClick={handlePrevious} className={styles.nextButton}>
+                <BsFillArrowLeftSquareFill />
+              </button>
+              <button
+                onClick={handleCancelButton}
+                className={styles.nextButton}
+              >
+                <MdCancel />
+              </button>
+            </div>
           )}
 
           <h2>Need External Card Support?</h2>
@@ -408,15 +535,39 @@ const FormPage = () => {
         </div>
       )}
       {currentStep === 11 && (
-        <div>
+        <div className={styles.laststep}>
           {currentStep > 0 && (
-            <button onClick={handlePrevious} className={styles.nextButton}>
-              <BsFillArrowLeftSquareFill />
-            </button>
+            <div className={styles.buttonstyle}>
+              <button onClick={handlePrevious} className={styles.nextButton}>
+                <BsFillArrowLeftSquareFill />
+              </button>
+              <button
+                onClick={handleCancelButton}
+                className={styles.nextButton}
+              >
+                <MdCancel />
+              </button>
+            </div>
           )}
         </div>
       )}
-      {currentStep < totalSteps - 1 ? (
+      {apiResponse ? (
+        <div className={styles.apiResponseContainer}>
+          <div className={styles.res}>
+            <h3>Suggested Brand</h3>
+            <div className={styles.resdiv}>
+              {apiResponse.suggested_brand}
+              <BsFire />
+            </div>
+          </div>
+          <div className={styles.res}>
+            <h3>Estimated Budget</h3>
+            <div className={styles.resdiv}>
+              Rs. {apiResponse.estimated_price}
+            </div>
+          </div>
+        </div>
+      ) : currentStep < totalSteps - 1 ? (
         <button onClick={handleNext} className={styles.nextButton}>
           <BsFillArrowRightSquareFill />
         </button>

@@ -128,3 +128,43 @@
     font-weight: normal;
     font-size: 1.2em;
 }
+
+.buttonstyle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.laststep{
+    width: 18.5em;
+}
+
+.apiResponseContainer{
+    margin-top: -5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.res h3{
+    font-size: 2em;
+    color: #a94efd;
+    font-weight: normal;
+}
+
+.resdiv{
+    font-size: 1.7em;
+    border: 3px solid #a94efd;
+    display: flex;
+    background-color: #a94efd;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    color: black;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-weight: bolder;
+}
