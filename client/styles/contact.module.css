@@ -1,0 +1,99 @@
+.container {
+    padding-top: 3em;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.ContactForm{
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.ContactForm div{
+    display: flex;
+    flex-direction: column;
+}
+
+.ContactForm div input{
+    outline: none;
+        width: 25.5em;
+        padding: 1em;
+        border-radius: 0.5em;
+        background-color: black;
+        border: 2px solid #b26aff;
+        color: #b26aff;
+        font-size: 1.1em;
+        margin-bottom: 1em;
+        margin-top: 1em;
+}
+
+.ContactForm div input::placeholder {
+    color: #9430ff;
+}
+
+.ContactForm div textarea{
+    outline: none;
+        width: 25.5em;
+        height: 7em;
+        padding: 1em;
+        border-radius: 0.5em;
+        background-color: black;
+        border: 2px solid #b26aff;
+        color: #b26aff;
+        font-size: 1.1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        resize: none;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+                Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.ContactForm div textarea::placeholder {
+    color: #9430ff;
+}
+
+.ContactForm div textarea::-webkit-scrollbar {
+    width: 0px;
+}
+
+.ContactForm h2{
+    font-size: 3em;
+    color: #8516fb;
+    margin-bottom: 0.5em;
+}
+
+.ContactForm div label{
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    font-size: 1.2em;
+}
+
+.submitButton{
+    color: black;
+        font-size: 1.3em;
+        width: 21.6em;
+        padding: 0.5em;
+        border-radius: 0.4em;
+        outline: none;
+        border: none;
+        background-color: #9430ff;
+        cursor: pointer;
+        font-weight: bold;
+}
+
+.submitButton:hover{
+    background-color: #8516fb;
+}
+
+.errorMessage{
+    color: rgb(255, 0, 85);
+    font-size: 1.1em;
+    font-weight: normal;
+    margin-bottom: 0.5em;
+}

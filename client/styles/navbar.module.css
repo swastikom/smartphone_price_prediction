@@ -5,7 +5,7 @@
     justify-content: space-around;
     width: 100%;
     padding: 1em 0em;
-    background: rgba(0, 0, 0, 0.504);
+    background: rgba(0, 0, 0, 0.838);
     backdrop-filter: blur(15px);
     border-bottom: 0.5px solid rgba(178, 178, 178, 0.19);
 }

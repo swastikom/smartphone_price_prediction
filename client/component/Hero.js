@@ -11,7 +11,7 @@ function Hero() {
         src="/smartphone.png"
         width={600}
         height={600}
-        alt="Picture of the author"
+        alt="hero image phone"
         className={styles.imageStyle}
       />
      <FormPage/>

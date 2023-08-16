@@ -1,0 +1,36 @@
+.container{
+    padding-top: 3em;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.aboutRight{
+    background-color: rgba(21, 21, 21, 0.692);
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 3em;
+    margin-top: 0.5em;
+    border-radius: 1em;
+    margin-right: 3em;
+    padding-right: 7em;
+}
+
+.aboutRight h2{
+    font-size: 6em;
+    font-weight: bold;
+    color: blueviolet;
+    padding-top: 0.1em;
+    padding-bottom: 0.3em;
+}
+
+.aboutRight h3{
+    font-size: 1.3em;
+    font-weight: normal;
+    padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        line-height: 1.5em;
+}
