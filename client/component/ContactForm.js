@@ -53,22 +53,31 @@ const ContactForm = () => {
     };
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      // const response = await fetch("/api/contact", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify(formData),
+      // });
 
-      if (response.ok) {
-        console.log("Email sent successfully");
-        setErrorMessage("");
-        resetForm(); // You can also reset the form fields here if needed
-      } else {
-        console.error("Error sending email");
-        setErrorMessage("* An error occurred while sending the email");
-      }
+      // Compose email URL
+    const email = "swastikom23@gmail.com";
+    const subject = `${formData.subject}`;
+    const body = `${formData.message}%0D%0A`; // %0D%0A used for New Line
+    const emailUrl = `mailto:${email}?subject=${subject}&body=${body}`;
+
+    // Open email URL in new tab
+    window.open(emailUrl);
+    
+      // if (response.ok) {
+      //   console.log("Email sent successfully");
+      //   setErrorMessage("");
+      //   resetForm(); // You can also reset the form fields here if needed
+      // } else {
+      //   console.error("Error sending email");
+      //   setErrorMessage("* An error occurred while sending the email");
+      // }
     } catch (error) {
       console.error("Error sending email:", error);
       setErrorMessage("* An error occurred while sending the email");
@@ -107,7 +116,7 @@ const ContactForm = () => {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="Your gmail (e.g - example@gmail.com)"
+          placeholder="Your email (e.g - example@gmail.com)"
           required
         />
       </div>
