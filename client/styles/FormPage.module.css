@@ -187,6 +187,9 @@
         align-items: center;
         font-size: 3.5em;
     }
+        .container h2{
+            font-size: 2.1em;
+        }
 
     .step1{
         align-items: center;
