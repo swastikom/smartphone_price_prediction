@@ -8,12 +8,12 @@
 
 .aboutRight{
     background-color: rgba(21, 21, 21, 0.692);
-    width: 40%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 3em;
-    margin-top: 0.5em;
+    margin-top: 4em;
     border-radius: 1em;
     margin-right: 3em;
     padding-right: 7em;
@@ -27,10 +27,37 @@
     padding-bottom: 0.3em;
 }
 
+
 .aboutRight h3{
     font-size: 1.3em;
     font-weight: normal;
     padding-top: 0.5em;
         padding-bottom: 0.5em;
         line-height: 1.5em;
+}
+
+@media (max-width: 1079px) {
+    .container{
+        flex-direction: column;
+        
+    }
+
+        .aboutRight {
+                text-align: left;
+                    margin-right: 4em;
+                    margin-left: 4em;
+                    width: auto;
+                    padding: 3em;
+                    margin-bottom: 0em;
+        }
+
+        .container Image{
+            display: none;
+        }
+
+                .aboutRight h2{
+                    font-size: 5em;
+                }
+
+                                .aboutRight h3 {font-size: 1em;}
 }

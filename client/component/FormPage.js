@@ -317,7 +317,8 @@ const FormPage = () => {
                     : styles.formButton
                 }
               >
-                {ram} GB
+                {ram}
+                <div>GB</div>
               </button>
             ))}
           </div>
@@ -352,7 +353,8 @@ const FormPage = () => {
                     : styles.formButton
                 }
               >
-                {rom} GB
+                {rom}
+                <div>GB</div>
               </button>
             ))}
           </div>

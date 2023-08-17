@@ -7,6 +7,7 @@
         flex-direction: column;
         padding-top: 2em;
         padding-bottom: 2em;
+        margin-top: 5em;
 }
 .footerMain{
         display: flex;
@@ -53,4 +54,16 @@
         padding-top: 4em;
         font-size: 0.9em;
         font-weight: lighter;
+}
+
+@media (max-width: 1079px) {
+        .footerMain h1{
+                font-size: 1.5em;
+                padding-left: 1.5em;
+                        padding-right: 1.5em;
+        }
+                .links Link{
+                        padding-left: 1.5em;
+                        padding-right: 1.5em;
+                }
 }

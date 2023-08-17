@@ -63,7 +63,7 @@
 }
 
 .ContactForm h2{
-    font-size: 3em;
+    font-size: 4em;
     color: #8516fb;
     margin-bottom: 0.5em;
 }
@@ -96,4 +96,22 @@
     font-size: 1.1em;
     font-weight: normal;
     margin-bottom: 0.5em;
+}
+
+@media (max-width: 1079px) {
+    .ContactForm div input{font-size: 1em;
+    width: 21.5em;}
+    .submitButton{
+            font-size: 1em;
+        }
+    .ContactForm div label{
+            font-size: 1em;
+        }
+    .ContactForm div textarea{
+            font-size: 1em;
+            width: 21.5em;
+        }
+        .ContactForm h2{
+            font-size: 3.5em;
+        }
 }

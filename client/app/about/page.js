@@ -5,12 +5,7 @@ import Image from 'next/image';
 function about() {
   return (
     <div className={styles.container}>
-      <Image
-        src="/about.png"
-        width={700}
-        height={700}
-        alt="about us"
-      />
+      
       <div className={styles.aboutRight}>
         <h2>About</h2>
         <h3>

@@ -1,13 +1,18 @@
-.hero{
+.hero {
     padding-top: 3.5em;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     height: 100%;
+    width: 100%;
 }
 
-.imageStyle{
-    margin-right: 10em;
-
+/* Media query for screens less than 768px */
+@media (max-width: 1079px) {
+    .imageStyle {
+        display: none;
+    }
+    .hero{
+        width: 100%;
+    }
 }
-

@@ -1,10 +1,10 @@
 .container {
     width: 25em;
-    height: 30em;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: flex-start;
+    justify-content: center;
 }
 
 .container h1 {
@@ -14,8 +14,8 @@
 }
 
 .container h2 {
-    padding-top: 0.5em;
-    padding-bottom: 0.4em;
+    padding-top: 1em;
+    padding-bottom: 1em;
     font-size: 2.5em;
     font-weight: 500;
 }
@@ -25,13 +25,15 @@
     align-items: center;
     justify-content: center;
     padding: 0px;
-    margin: 0px;
     border: 0px;
     background: none;
     cursor: pointer;
     color: blueviolet;
     font-size: 3em;
+    
 }
+
+
 
 .nextButton:hover {
     color: rgb(91, 13, 163);
@@ -57,7 +59,7 @@
 
 .buttonGroup {
     display: grid;
-    grid-template-columns: repeat(3, 9em);
+    grid-template-columns: repeat(3, auto);
     gap: 10px;
 }
 
@@ -73,6 +75,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    /* gap: 1em; */
+    width: 7em;
 }
 
 .formButton:hover{
@@ -94,7 +98,7 @@
 
 .textInputContainer input{
     outline: none;
-    width: 25.5em;
+    width: 22em;
     padding: 1em;
     border-radius: 0.5em;
     background-color: black;
@@ -127,6 +131,8 @@
     color: rgb(255, 0, 81);
     font-weight: normal;
     font-size: 1.2em;
+    padding-bottom: 1em;
+    padding-top: 1em;
 }
 
 .buttonstyle{
@@ -137,15 +143,16 @@
 }
 
 .laststep{
-    width: 18.5em;
+    width: 100%;
+    margin-bottom: 1em;
 }
 
 .apiResponseContainer{
-    margin-top: -5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .res h3{
@@ -167,4 +174,31 @@
     margin-top: 1em;
     margin-bottom: 1em;
     font-weight: bolder;
+}
+
+
+@media (max-width: 1079px) {
+    .container{
+        align-items: center;
+        text-align: center;
+    } 
+
+    .container h1{
+        align-items: center;
+        font-size: 3.5em;
+    }
+
+    .step1{
+        align-items: center;
+    }
+
+    .step1 h2{
+        text-align: center;
+        font-size: 2.5em;
+    }
+        .buttonGroup{
+            align-items: center;
+            justify-content: center;
+            width: auto;
+        }
 }

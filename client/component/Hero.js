@@ -1,8 +1,7 @@
-import React from 'react'
-import Image from 'next/image'
-import styles from '@/styles/hero.module.css'
-import FormPage from './FormPage';
-
+import React from "react";
+import Image from "next/image";
+import styles from "@/styles/hero.module.css";
+import FormPage from "./FormPage";
 
 function Hero() {
   return (
@@ -14,9 +13,9 @@ function Hero() {
         alt="hero image phone"
         className={styles.imageStyle}
       />
-     <FormPage/>
+      <FormPage />
     </div>
   );
 }
 
-export default Hero
+export default Hero;
