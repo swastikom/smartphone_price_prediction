@@ -6,7 +6,7 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000",  # Add your frontend's origin here
-    # Add more origins as needed
+    "https://smartphone-price-prediction.vercel.app/"
 ]
 
 app.add_middleware(
